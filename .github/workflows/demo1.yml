@@ -1,5 +1,7 @@
-# Runs whenever a pull request is opened
-# push to either the main of dev branch will trigger and evetn
+#this event is triggered when we push to the main or dev branch, 
+# on an open pull request and when changes are made on files excluding the .github/workflows/
+#
+#
 
 name: Events Demo 1
 on:
@@ -11,6 +13,9 @@ on:
     branches:
       - main
       - dev
+
+    paths-ignore:
+    - '.github/workflows/*'
 
 jobs:
   deploy:
