@@ -1,10 +1,17 @@
 # Runs whenever a pull request is opened
+# push to either the main of dev branch will trigger and evetn
 
 name: Events Demo 1
-on: 
+on:
   pull_request:
     types:
       - opened
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - dev
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -21,4 +28,3 @@ jobs:
         run: npm run build
       - name: Deploy project
         run: echo "Deploying..."
-
