@@ -1,7 +1,7 @@
 #this event is triggered when we push to the main or dev branch, 
 # on an open pull request and when changes are made on files excluding the .github/workflows/
 #
-#
+#changed in workflow folder
 
 name: Events Demo 1
 on:
